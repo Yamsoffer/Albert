@@ -177,14 +177,14 @@ init(); draw();
 
   if (!reduce) {
     let raf = null, tx = 0, ty = 0, rot = 0;
-    function apply() { raf = null; stage.style.transform = `translate(${tx}px, ${ty}px) rotate(${rot}deg)`; }
+    function apply() { raf = null; stage.style.transform = `translateX(-50px) translate(${tx}px, ${ty}px) rotate(${rot}deg)`; }
     window.addEventListener('mousemove', e => {
       const cx = window.innerWidth / 2, cy = window.innerHeight / 2;
       const nx = (e.clientX - cx) / cx, ny = (e.clientY - cy) / cy;
       tx = nx * 10; ty = ny * 6; rot = nx * 2.2;
       if (!raf) raf = requestAnimationFrame(apply);
     });
-    document.addEventListener('mouseleave', () => { stage.style.transform = ''; });
+    document.addEventListener('mouseleave', () => { stage.style.transform = 'translateX(-50px)'; });
   }
 
 })();
