@@ -25,10 +25,10 @@
   }
 
   /* Logo */
-  .logo-row { display:flex; align-items:center; gap:12px; margin-bottom:32px; }
-  .logo-row svg { width:34px; height:34px; }
+  .logo-row { display:flex; align-items:center; gap:14px; margin-bottom:32px; }
+  .logo-row .classiq-logo { height:22px; width:auto; }
+  .logo-sep { font-size:15px; font-weight:300; color:var(--dim); }
   .logo-name { font-size:15px; font-weight:900; letter-spacing:.18em; color:var(--offwhite); }
-  .logo-name span { color:var(--pink); }
 
   /* Eyebrow headline */
   .eyebrow {
@@ -41,7 +41,7 @@
   .stage {
     position:relative; width:min(300px,72vw); margin:0 auto -20px auto;
     display:flex; align-items:flex-end; justify-content:center;
-    transform:translateX(-30px);
+    transform:translateX(-50px);
     transition:transform .4s cubic-bezier(.22,1,.36,1);
     will-change:transform; cursor:pointer;
   }
@@ -88,7 +88,7 @@
     color:var(--lime); text-align:center; margin-top:14px;
   }
   .blurb {
-    max-width:480px; font-size:13px; line-height:1.7; color:var(--dim);
+    max-width:480px; font-size:13px; line-height:1.7; color:rgba(201,203,192,0.65);
     text-align:center; margin-top:22px;
   }
 
@@ -112,12 +112,9 @@
 
   <!-- Logo -->
   <div class="logo-row">
-    <svg viewBox="0 0 36 36" fill="none">
-      <polygon points="18,3 33,30 3,30" fill="none" stroke="#F43764" stroke-width="2" opacity=".9"/>
-      <polygon points="18,11 27,28 9,28" fill="#F43764" opacity=".18"/>
-      <circle cx="18" cy="23" r="2.8" fill="#d7f75b"/>
-    </svg>
-    <div class="logo-name">CLASSIQ<span> · AGENTS</span></div>
+    <img class="classiq-logo" src="classiq-logo.svg" alt="Classiq" />
+    <span class="logo-sep">·</span>
+    <div class="logo-name">AGENTS</div>
   </div>
 
   <div class="eyebrow">CLASSIQ MEETS THE FIRST <b>QUANTUM ENGINEER</b> AGENT</div>
@@ -134,9 +131,9 @@
   <div class="name">ALBERT<span>.</span></div>
   <div class="role">YOUR QUANTUM ENGINEER · ON DEMAND</div>
   <div class="blurb">
-    The first agent on the Classiq platform. Albert designs, builds and debugs
-    quantum algorithms with you — from idea to running circuit.
-    Smart, approachable, and always ready to help.
+    Classiq's first quantum engineer agent.<br>
+    Albert designs, builds, debugs and executes quantum algorithms with you.<br>
+    Smart, approachable, and always there.
   </div>
 
   <div class="footer-line">
